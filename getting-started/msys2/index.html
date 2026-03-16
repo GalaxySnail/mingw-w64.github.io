@@ -10,30 +10,36 @@
       
       
       
+        <link rel="canonical" href="https://www.mingw-w64.org/getting-started/msys2/">
       
+      
+        <link rel="prev" href="../fedora/">
+      
+      
+        <link rel="next" href="../msys2-llvm/">
       
       
         
       
       
-      <link rel="icon" href="/logo.svg">
+      <link rel="icon" href="../../logo.svg">
       <meta name="generator" content="zensical-0.0.27">
     
     
       
-        <title>mingw-w64</title>
+        <title>Windows / MSYS2 (GCC) - mingw-w64</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.50057488.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.50057488.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -46,11 +52,11 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/stylesheets/fonts.css">
+      <link rel="stylesheet" href="../../stylesheets/fonts.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -74,7 +80,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#windows-msys2-gcc" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +97,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="mingw-w64" class="md-header__button md-logo" aria-label="mingw-w64" data-md-component="logo">
+    <a href="../.." title="mingw-w64" class="md-header__button md-logo" aria-label="mingw-w64" data-md-component="logo">
       
-  <img src="/logo.svg" alt="mingw-w64">
+  <img src="../../logo.svg" alt="mingw-w64">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
@@ -109,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Windows / MSYS2 (GCC)
             
           </span>
         </div>
@@ -208,9 +215,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="mingw-w64" class="md-nav__button md-logo" aria-label="mingw-w64" data-md-component="logo">
+    <a href="../.." title="mingw-w64" class="md-nav__button md-logo" aria-label="mingw-w64" data-md-component="logo">
       
-  <img src="/logo.svg" alt="mingw-w64">
+  <img src="../../logo.svg" alt="mingw-w64">
 
     </a>
     mingw-w64
@@ -237,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -264,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   
@@ -288,18 +295,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -320,7 +329,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -338,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting-started/archlinux/" class="md-nav__link">
+      <a href="../archlinux/" class="md-nav__link">
         
   
   
@@ -366,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting-started/debian/" class="md-nav__link">
+      <a href="../debian/" class="md-nav__link">
         
   
   
@@ -394,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting-started/fedora/" class="md-nav__link">
+      <a href="../fedora/" class="md-nav__link">
         
   
   
@@ -419,10 +428,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/getting-started/msys2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows / MSYS2 (GCC)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -438,6 +474,60 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -450,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting-started/msys2-llvm/" class="md-nav__link">
+      <a href="../msys2-llvm/" class="md-nav__link">
         
   
   
@@ -532,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/downloads/" class="md-nav__link">
+      <a href="../../downloads/" class="md-nav__link">
         
   
   
@@ -560,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/source/" class="md-nav__link">
+      <a href="../../source/" class="md-nav__link">
         
   
   
@@ -642,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/build-systems/meson/" class="md-nav__link">
+      <a href="../../build-systems/meson/" class="md-nav__link">
         
   
   
@@ -670,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/build-systems/cmake/" class="md-nav__link">
+      <a href="../../build-systems/cmake/" class="md-nav__link">
         
   
   
@@ -752,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/gendef/" class="md-nav__link">
+      <a href="../../tools/gendef/" class="md-nav__link">
         
   
   
@@ -780,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/genidl/" class="md-nav__link">
+      <a href="../../tools/genidl/" class="md-nav__link">
         
   
   
@@ -808,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/genpeimg/" class="md-nav__link">
+      <a href="../../tools/genpeimg/" class="md-nav__link">
         
   
   
@@ -836,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/widl/" class="md-nav__link">
+      <a href="../../tools/widl/" class="md-nav__link">
         
   
   
@@ -871,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/support/" class="md-nav__link">
+      <a href="../../support/" class="md-nav__link">
         
   
   
@@ -945,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contribute/" class="md-nav__link">
+      <a href="../../contribute/" class="md-nav__link">
         
   
   
@@ -973,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/donate/" class="md-nav__link">
+      <a href="../../donate/" class="md-nav__link">
         
   
   
@@ -1019,6 +1109,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1031,8 +1164,60 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+    <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/getting-started/msys2.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
 
+
+<h1 id="windows-msys2-gcc">Windows / MSYS2 (GCC)</h1>
+<h2 id="installation">Installation</h2>
+<p>Install MSYS2 from the official website: <a href="https://www.msys2.org">https://www.msys2.org</a></p>
+<p>After installation, open "MSYS2 UCRT64" from the Start menu and install the C
+and C++ compiler:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman<span class="w"> </span>-S<span class="w"> </span>mingw-w64-ucrt-x86_64-gcc
+</code></pre></div>
+<p>To check the version of the provided GCC and mingw-w64:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman<span class="w"> </span>-Qi<span class="w"> </span>mingw-w64-ucrt-x86_64-gcc<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Version
+<span class="go">Version         : 14.2.0-2  # GCC Version</span>
+<span class="gp">$ </span>pacman<span class="w"> </span>-Qi<span class="w"> </span>mingw-w64-ucrt-x86_64-headers<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Version
+<span class="go">Version         : 12.0.0.r473.gce0d0bfb7-1  # mingw-w64 Version</span>
+</code></pre></div>
+<h2 id="building">Building</h2>
+<p>Creating and compiling a Windows executable:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// hello.c</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, Windows!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>gcc<span class="w"> </span>hello.c<span class="w"> </span>-o<span class="w"> </span>hello.exe
+</code></pre></div>
+<h2 id="testing">Testing</h2>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>./hello.exe
+<span class="go">Hello, Windows!</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1072,10 +1257,10 @@
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["navigation.instant","content.action.edit","content.code.copy","content.tabs.link"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.instant","content.action.edit","content.code.copy","content.tabs.link"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.5fd3284f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

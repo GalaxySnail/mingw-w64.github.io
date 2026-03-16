@@ -10,34 +10,36 @@
       
       
       
-        <link rel="canonical" href="https://www.mingw-w64.org/">
+        <link rel="canonical" href="https://www.mingw-w64.org/tools/widl/">
       
       
+        <link rel="prev" href="../genpeimg/">
       
-        <link rel="next" href="./changelog/">
+      
+        <link rel="next" href="../../support/">
       
       
         
       
       
-      <link rel="icon" href="./logo.svg">
+      <link rel="icon" href="../../logo.svg">
       <meta name="generator" content="zensical-0.0.27">
     
     
       
-        <title>mingw-w64</title>
+        <title>widl(1) - mingw-w64</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="./assets/stylesheets/modern/main.50057488.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.50057488.min.css">
       
         
           
         
-        <link rel="stylesheet" href="./assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -50,11 +52,11 @@
       
     
     
-      <link rel="stylesheet" href="./stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="./stylesheets/fonts.css">
+      <link rel="stylesheet" href="../../stylesheets/fonts.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -79,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#widl1" class="md-skip">
           Skip to content
         </a>
       
@@ -95,9 +97,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="" title="mingw-w64" class="md-header__button md-logo" aria-label="mingw-w64" data-md-component="logo">
+    <a href="../.." title="mingw-w64" class="md-header__button md-logo" aria-label="mingw-w64" data-md-component="logo">
       
-  <img src="./logo.svg" alt="mingw-w64">
+  <img src="../../logo.svg" alt="mingw-w64">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              widl(1)
             
           </span>
         </div>
@@ -213,9 +215,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="" title="mingw-w64" class="md-nav__button md-logo" aria-label="mingw-w64" data-md-component="logo">
+    <a href="../.." title="mingw-w64" class="md-nav__button md-logo" aria-label="mingw-w64" data-md-component="logo">
       
-  <img src="./logo.svg" alt="mingw-w64">
+  <img src="../../logo.svg" alt="mingw-w64">
 
     </a>
     mingw-w64
@@ -239,37 +241,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -285,49 +260,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#project-collaborations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project Collaborations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#projects-using-mingw-w64" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Projects using mingw-w64
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -339,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   
@@ -413,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./getting-started/archlinux/" class="md-nav__link">
+      <a href="../../getting-started/archlinux/" class="md-nav__link">
         
   
   
@@ -441,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./getting-started/debian/" class="md-nav__link">
+      <a href="../../getting-started/debian/" class="md-nav__link">
         
   
   
@@ -469,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./getting-started/fedora/" class="md-nav__link">
+      <a href="../../getting-started/fedora/" class="md-nav__link">
         
   
   
@@ -497,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./getting-started/msys2/" class="md-nav__link">
+      <a href="../../getting-started/msys2/" class="md-nav__link">
         
   
   
@@ -525,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./getting-started/msys2-llvm/" class="md-nav__link">
+      <a href="../../getting-started/msys2-llvm/" class="md-nav__link">
         
   
   
@@ -607,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./downloads/" class="md-nav__link">
+      <a href="../../downloads/" class="md-nav__link">
         
   
   
@@ -635,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./source/" class="md-nav__link">
+      <a href="../../source/" class="md-nav__link">
         
   
   
@@ -717,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./build-systems/meson/" class="md-nav__link">
+      <a href="../../build-systems/meson/" class="md-nav__link">
         
   
   
@@ -745,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./build-systems/cmake/" class="md-nav__link">
+      <a href="../../build-systems/cmake/" class="md-nav__link">
         
   
   
@@ -777,18 +709,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -809,7 +743,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -827,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./tools/gendef/" class="md-nav__link">
+      <a href="../gendef/" class="md-nav__link">
         
   
   
@@ -855,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./tools/genidl/" class="md-nav__link">
+      <a href="../genidl/" class="md-nav__link">
         
   
   
@@ -883,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./tools/genpeimg/" class="md-nav__link">
+      <a href="../genpeimg/" class="md-nav__link">
         
   
   
@@ -908,10 +842,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="./tools/widl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    widl
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -927,6 +888,242 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NAME
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SYNOPSIS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPTIONS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OPTIONS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-library-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type library options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uuid-file-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UUID file options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxystub-generation-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy/stub generation options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-script-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration script options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlldata-file-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dlldata file options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessor-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preprocessor options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miscellaneous options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEBUG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BUGS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTHORS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AVAILABILITY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEE ALSO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -946,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./support/" class="md-nav__link">
+      <a href="../../support/" class="md-nav__link">
         
   
   
@@ -1020,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./contribute/" class="md-nav__link">
+      <a href="../../contribute/" class="md-nav__link">
         
   
   
@@ -1048,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./donate/" class="md-nav__link">
+      <a href="../../donate/" class="md-nav__link">
         
   
   
@@ -1104,10 +1301,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-collaborations" class="md-nav__link">
+  <a href="#name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Project Collaborations
+        NAME
       
     </span>
   </a>
@@ -1115,10 +1312,203 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#projects-using-mingw-w64" class="md-nav__link">
+  <a href="#synopsis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Projects using mingw-w64
+        SYNOPSIS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DESCRIPTION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPTIONS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OPTIONS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-library-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type library options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uuid-file-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UUID file options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxystub-generation-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy/stub generation options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-script-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration script options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlldata-file-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dlldata file options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessor-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preprocessor options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miscellaneous options:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DEBUG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BUGS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTHORS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AVAILABILITY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEE ALSO
       
     </span>
   </a>
@@ -1140,7 +1530,7 @@
                 
                   
   
-    <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/tools/widl.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -1148,145 +1538,91 @@
   
 
 
-<header>
-<h1 style="text-align: center; margin: 3% 0 3% 0">
-    <img src="header-dark.svg#gh-dark-mode-only" width="400px" height="88.15px" style="max-width: min(90%, 400px, calc(100vw - 80px));">
-    <img src="header.svg#gh-light-mode-only" width="400px" height="88.15px" style="max-width: min(90%, 400px, calc(100vw - 80px));">
-</h1>
-</header>
-
-<h1 id="_1"></h1>
-<p>Mingw-w64 is a collection of header files, import libraries, libraries and tools
-that, when combined with a compiler toolchain, such as GCC or LLVM, provides a
-complete development environment for building native Windows applications and
-libraries.</p>
-<p>Mingw-w64 is an advancement of the original mingw.org project, which was created
-to support the GCC compiler on Windows systems. It was forked in 2007 in order
-to provide 64-bit support and newer APIs. It has since then gained wide use and
-distribution.</p>
-<p><strong>Headers and Libraries:</strong></p>
+<h1 id="widl1">widl(1)</h1>
+<h2 id="name">NAME</h2>
+<p>widl - Wine Interface Definition Language (IDL) compiler</p>
+<h2 id="synopsis">SYNOPSIS</h2>
+<p><strong>widl</strong> [<em>options</em>] <em>IDL_file</em></p>
+<p><strong>widl</strong> [<em>options</em>] --dlldata-only <em>name1</em> [<em>name2...</em>]</p>
+<h2 id="description">DESCRIPTION</h2>
+<p>When no options are used the program will generate a header file, and possibly client and server stubs, proxy and dlldata files, a typelib, and a UUID file, depending on the contents of the IDL file. If any of the options <code>-c</code>, <code>-h</code>, <code>-p</code>, <code>-s</code>, <code>-t</code>, <code>-u</code> or <code>--local-stubs</code> is given, <code>widl</code> will only generate the requested files, and no others. When run with <code>--dlldata-only</code>, widl will only generate a dlldata file, and it will contain a list of the names passed as arguments. Usually the way this file is updated is that each time <code>widl</code> is run, it reads any existing dlldata file, and if necessary regenerates it with the same list of names, but with the present proxy file included.</p>
+<p>When run without any arguments, <code>widl</code> will print a help message.</p>
+<h2 id="options">OPTIONS</h2>
+<h3 id="general-options">General options:</h3>
 <ul>
-<li>More than a million lines of headers are provided, not counting generated ones,
-  and regularly expanded to track new Windows APIs.</li>
-<li>Everything needed for linking and running your code on Windows.</li>
-<li>Better-conforming and faster math support compared to VisualStudio's.</li>
+<li><code>-V</code> - Print version number and exit.</li>
+<li><code>-o, --output=name</code> - Set the name of the output file. When generating multiple output files, this sets only the base name of the file; the respective output files are then named <em>name</em>.h, <em>name</em>_p.c, etc.</li>
+<li><code>-b cpu-manufacturer[-kernel]-os</code> - Set the target architecture when cross-compiling. The target specification is in the standard autoconf format as returned by <code>config.sub</code>.</li>
 </ul>
-<p><strong>Runtime Libraries:</strong></p>
+<h3 id="header-options">Header options:</h3>
 <ul>
-<li>Winpthreads, a pthreads library for C++11 threading support and simple
-  integration with existing project.</li>
-<li>Winstorecompat, a work-in-progress convenience library that eases conformance
-  with the Windows Store.</li>
+<li><code>-h</code> - Generate header files. The default output filename is <em>infile</em>.h.</li>
+<li><code>--oldnames</code> - Use old naming conventions.</li>
 </ul>
-<p><strong>Tools:</strong></p>
+<h3 id="type-library-options">Type library options:</h3>
 <ul>
-<li>gendef: generate Visual Studio .def files from .dll files.</li>
-<li>genidl: generate .idl files from .dll files.</li>
-<li>widl: compile .idl files.</li>
+<li><code>-t</code> - Generate a type library. The default output filename is <em>infile</em>.tlb. If the output file name ends in <code>.res</code>, a binary resource file containing the type library is generated instead.</li>
+<li><code>-m32, -m64</code> - Generate a Win32 or Win64 type library respectively.</li>
 </ul>
-<h2 id="project-collaborations">Project Collaborations</h2>
-<p>Mingw-w64 interacts a lot with other projects in order to help everyone move
-forward. Contributions have been going to and coming from these projects:</p>
-<table>
-<tr>
-<td style="text-align: center">
-    <a href="https://cygwin.com" class="media" title="https://cygwin.com"><img src="./logos/cygwin-logo.png" title="Cygwin" width="64" height="64" alt="Cygwin" />
-    <br>Cygwin
-    </a>
-</td>
-<td style="text-align: center">
-    <a href="https://reactos.org/" class="media" title="https://reactos.org/"><img src="./logos/reactos-logo.png" title="ReactOS" width="116" height="64" alt="ReactOS" />
-    <br>
-    ReactOS
-    </a>
-</td>
-<td style="text-align: center">
-    <a href="https://winehq.org" class="media" title="https://winehq.org"><img src="./logos/wine-logo.png" title="Wine" width="40" height="64" alt="Wine" />
-    <br>
-    Wine
-    </a>
-</td>
-<td style="text-align: center">
-    <a href="https://www.msys2.org" class="media" title="https://www.msys2.org"><img src="./logos/msys2-logo.png" title="MSYS2" width="64" height="64" alt="MSYS2" />
-    <br>
-    MSYS2
-    </a>
-</td>
-</tr>
-</table>
-
-<h2 id="projects-using-mingw-w64">Projects using mingw-w64</h2>
+<h3 id="uuid-file-options">UUID file options:</h3>
 <ul>
-<li><a href="https://fedoraproject.org/wiki/MinGW">Fedora cross-compiler</a></li>
-<li><a href="https://npackd.appspot.com">Npackd</a></li>
-<li><a href="https://opensuse.org">OpenSUSE</a></li>
-<li><a href="https://win-builds.org">Win-builds</a></li>
-<li><a href="https://code.google.com/p/barchart-udt/">Barchart-UDT</a></li>
-<li><a href="https://www.blender.org/">Blender</a></li>
-<li><a href="https://www.boost.org/">Boost</a></li>
-<li><a href="https://botan.randombit.net/">Botan</a></li>
-<li><a href="https://www.codeblocks.org/">Code::Blocks</a></li>
-<li><a href="https://www.crownengine.org/">Crown Engine</a></li>
-<li><a href="https://daetools.sourceforge.net">DAE Tools</a></li>
-<li><a href="https://devkitpro.org/">devkitPro</a></li>
-<li><a href="https://sourceforge.net/projects/dbh/">Disk Based HashTables</a></li>
-<li><a href="https://www.ecere.org/">Ecere SDK</a></li>
-<li><a href="https://www.ekiga.org/">Ekiga</a></li>
-<li><a href="https://emergedesktop.org">Emerge Desktop</a></li>
-<li><a href="https://www.enlightenment.org/">Enlightenment</a></li>
-<li><a href="https://factorcode.org/">Factor</a></li>
-<li><a href="https://ffmpeg.mplayerhq.hu/">FFmpeg</a></li>
-<li><a href="https://www.fltk.org/">FLTK</a></li>
-<li><a href="https://fc-solve.shlomifish.org/">Freecell Solver</a></li>
-<li><a href="https://freeverb3.sourceforge.net/">Freeverb3</a></li>
-<li><a href="https://gcc.gnu.org/">GCC: The GNU Compiler Collection</a></li>
-<li><a href="https://www.gnu.org/software/gdb/">GDB: The GNU Project Debugger</a></li>
-<li><a href="https://www.gimp.org">GIMP</a></li>
-<li><a href="https://www.gnu.org/software/binutils/">GNU Binutils</a></li>
-<li><a href="https://www.gnu.org/software/gsasl/">GNU SASL</a></li>
-<li><a href="https://www.gnu.org/software/gnutls/">GnuTLS</a></li>
-<li><a href="http://www.graphicsmagick.org/">GraphicsMagick</a></li>
-<li><a href="https://www.gtk.org/docs/installations/windows">GTK+</a></li>
-<li><a href="https://uhexen2.sf.net/">Hexen II: Hammer of Thyrion</a></li>
-<li><a href="https://www.imagemagick.org/">ImageMagick</a></li>
-<li><a href="https://jpen.sf.net/">JPen</a></li>
-<li><a href="https://kotlinlang.org">Kotlin</a></li>
-<li><a href="https://kde.org/">KDE Software Collection</a></li>
-<li><a href="https://www.libreoffice.org/">LibreOffice</a></li>
-<li><a href="http://www.mega-nerd.com/libsndfile/">libsndfile</a></li>
-<li><a href="https://libvirt.org/">libvirt</a></li>
-<li><a href="https://www.webmproject.org/">libvpx</a></li>
-<li><a href="https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home">Libxml2</a></li>
-<li><a href="https://mamedev.org/">MAME (Yes, the arcade emulator!)</a></li>
-<li><a href="https://common-lisp.net/project/mkcl/">ManKai Common Lisp</a></li>
-<li><a href="https://www.mpg123.de/">mpg123</a></li>
-<li><a href="https://www.symscape.com/configure-msmpi-for-mingw-w64">MS MPI</a></li>
-<li><a href="https://www.ocaml.org">OCaml</a></li>
-<li><a href="https://www.symscape.com/openfoam-1-7-x-on-windows-64-mpi">OpenFOAM</a></li>
-<li><a href="https://www.eligis.com/">OpenLisp</a></li>
-<li><a href="https://www.openssl.org/">OpenSSL</a></li>
-<li><a href="https://openturns.github.io/www/">OpenTURNS</a></li>
-<li><a href="https://www.perl.org/">Perl (5.12.0 and later)</a></li>
-<li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-<li><a href="https://sourceware.org/pthreads-win32/">pthreads</a></li>
-<li><a href="https://www.paratools.com/PToolsWIN">PToolsWin</a></li>
-<li><a href="https://qemu.org">QEMU</a></li>
-<li><a href="https://qt-project.org/">Qt</a></li>
-<li><a href="https://quakespasm.sourceforge.net/">QuakeSpasm</a></li>
-<li><a href="https://remood.sf.net/">ReMooD</a></li>
-<li><a href="http://smartimagedenoiser.com/">Smart Image Denoiser</a></li>
-<li><a href="https://smartmontools.sourceforge.net/">smartmontools</a></li>
-<li><a href="https://strawberryperl.com/">Strawberry Perl (bundles C toolchains)</a></li>
-<li><a href="https://strongswan.org/">strongSwan</a></li>
-<li><a href="https://www.r-project.org/">The R Project for Statistical Computing</a></li>
-<li><a href="https://www.videolan.org/vlc/">VideoLAN VLC</a></li>
-<li><a href="https://www.vsxu.com/">VSXu</a></li>
-<li><a href="https://www.woodem.eu/">Woo</a></li>
-<li><a href="https://www.wxwidgets.org/">wxWidgets</a></li>
-<li><a href="https://www.yafaray.org/">YafaRay</a></li>
-<li><a href="https://www.zlib.net/">zlib</a></li>
+<li><code>-u</code> - Generate a UUID file. The default output filename is <em>infile</em>_i.c.</li>
 </ul>
-<p><em>Feel free to add your project to this list!</em></p>
+<h3 id="proxystub-generation-options">Proxy/stub generation options:</h3>
+<ul>
+<li><code>-c</code> - Generate a client stub file. The default output filename is <em>infile</em>_c.c.</li>
+<li><code>-Os</code> - Generate inline stubs.</li>
+<li><code>-Oi</code> - Generate old-style interpreted stubs.</li>
+<li><code>-Oif, -Oic, -Oicf</code> - Generate new-style fully interpreted stubs.</li>
+<li><code>-p</code> - Generate a proxy. The default output filename is <em>infile</em>_p.c.</li>
+<li><code>--prefix-all=prefix</code> - Prefix to put on the name of both client and server stubs.</li>
+<li><code>--prefix-client=prefix</code> - Prefix to put on the name of client stubs.</li>
+<li><code>--prefix-server=prefix</code> - Prefix to put on the name of server stubs.</li>
+<li><code>-s</code> - Generate a server stub file. The default output filename is <em>infile</em>_s.c.</li>
+<li><code>--win32</code>, <code>--win64</code> - Only generate 32-bit or 64-bit code respectively (the default is to generate both 32-bit and 64-bit versions into the same destination file).</li>
+<li><code>--rt</code> - Enable additional language extensions for IDL to support WinRT.</li>
+</ul>
+<h3 id="registration-script-options">Registration script options:</h3>
+<ul>
+<li><code>-r</code> - Generate a registration script. The default output filename is <em>infile</em>_r.rgs. If the output file name ends in <code>.res</code>, a binary resource file containing the script is generated instead.</li>
+</ul>
+<h3 id="dlldata-file-options">Dlldata file options:</h3>
+<ul>
+<li><code>--dlldata-only name1 [name2...]</code> - Regenerate the dlldata file from scratch using the specified proxy names. The default output filename is <code>dlldata.c</code>.</li>
+</ul>
+<h3 id="preprocessor-options">Preprocessor options:</h3>
+<ul>
+<li><code>-I path</code> - Add a header search directory to path. Multiple search directories are allowed.</li>
+<li><code>-D id[=val]</code> - Define preprocessor macro <em>id</em> with value <em>val</em>.</li>
+<li><code>-E</code> - Preprocess only.</li>
+<li><code>-N</code> - Do not preprocess input.</li>
+</ul>
+<h3 id="debug-options">Debug options:</h3>
+<ul>
+<li><code>-W</code> - Enable pedantic warnings.</li>
+<li><code>-d n</code> - Set debug level to the non negative integer <em>n</em>. If prefixed with <code>0x</code>, it will be interpreted as a hexadecimal number. For the meaning of values, see the DEBUG section.</li>
+</ul>
+<h3 id="miscellaneous-options">Miscellaneous options:</h3>
+<ul>
+<li><code>-app_config</code> - Ignored, present for midl compatibility.</li>
+<li><code>--local-stubs=file</code> - Generate empty stubs for call_as/local methods in an object interface and write them to <em>file</em>.</li>
+</ul>
+<h2 id="debug">DEBUG</h2>
+<p>Debug level <em>n</em> is a bitmask with the following meaning:
+- 0x01 Tell which resource is parsed (verbose mode)
+- 0x02 Dump internal structures
+- 0x04 Create a parser trace (yydebug=1)
+- 0x08 Preprocessor messages
+- 0x10 Preprocessor lex messages
+- 0x20 Preprocessor yacc trace</p>
+<h2 id="bugs">BUGS</h2>
+<p>Bugs can be reported on the <a href="http://bugs.winehq.org">Wine bug tracker</a>.</p>
+<h2 id="authors">AUTHORS</h2>
+<p><code>widl</code> was originally written by Ove Kåven. It has been improved by Rob Shearman, Dan Hipschman, and others. For a complete list, see the git commit logs. This man page was originally written by Hannu Valtonen and then updated by Dan Hipschman.</p>
+<h2 id="availability">AVAILABILITY</h2>
+<p><code>widl</code> is part of the Wine distribution, which is available through WineHQ, the <a href="http://www.winehq.org/">Wine development headquarters</a>.</p>
+<h2 id="see-also">SEE ALSO</h2>
+<p><a href="http://www.winehq.org/help">Wine documentation and support</a></p>
 
 
 
@@ -1341,10 +1677,10 @@ forward. Contributions have been going to and coming from these projects:</p>
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["navigation.instant","content.action.edit","content.code.copy","content.tabs.link"],"search":"./assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.instant","content.action.edit","content.code.copy","content.tabs.link"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="./assets/javascripts/bundle.5fd3284f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>

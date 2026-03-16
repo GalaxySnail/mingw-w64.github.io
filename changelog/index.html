@@ -6,32 +6,47 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="GCC for Windows 64 & 32 bits">
+        <meta name="description" content="A complete runtime environment for GCC & LLVM for 32-bit (x86), 64-bit (x64), and ARM64 Windows">
       
       
       
         <link rel="canonical" href="https://www.mingw-w64.org/changelog/">
       
+      
+        <link rel="prev" href="./..">
+      
+      
+        <link rel="next" href="../getting-started/archlinux/">
+      
+      
+        
+      
+      
       <link rel="icon" href="../logo.svg">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="zensical-0.0.27">
     
     
       
-        <title>Changelog - MinGW-w64</title>
+        <title>Changelog - mingw-w64</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.50057488.min.css">
+      
         
           
-          
-          <meta name="theme-color" content="#ffffff">
         
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
+      
+
+
     
+    
+      
     
     
       
@@ -41,7 +56,7 @@
     
       <link rel="stylesheet" href="../stylesheets/fonts.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -52,16 +67,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -77,21 +93,24 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="MinGW-w64" class="md-header__button md-logo" aria-label="MinGW-w64" data-md-component="logo">
+    <a href="./.." title="mingw-w64" class="md-header__button md-logo" aria-label="mingw-w64" data-md-component="logo">
       
-  <img src="../logo.svg" alt="logo">
+  <img src="../logo.svg" alt="mingw-w64">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MinGW-w64
+            mingw-w64
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -104,54 +123,73 @@
       </div>
     </div>
     
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
       
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
+      
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/mingw-w64/mingw-w64.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -174,21 +212,22 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="MinGW-w64" class="md-nav__button md-logo" aria-label="MinGW-w64" data-md-component="logo">
+    <a href="./.." title="mingw-w64" class="md-nav__button md-logo" aria-label="mingw-w64" data-md-component="logo">
       
-  <img src="../logo.svg" alt="logo">
+  <img src="../logo.svg" alt="mingw-w64">
 
     </a>
-    MinGW-w64
+    mingw-w64
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/mingw-w64/mingw-w64.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -200,14 +239,26 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        Overview
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -215,33 +266,59 @@
     
       
       
-      
-
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Changelog
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Changelog
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
       </a>
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -250,97 +327,248 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v1300-2025-06-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v13.0.0: 2025-06-08
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v803-2024-06-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v8.0.3: 2024-06-05
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1200-2024-05-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v12.0.0: 2024-05-29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v601-2023-10-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v6.0.1: 2023-10-30
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v505-2023-10-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v5.0.5: 2023-10-30
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1101-2023-04-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v11.0.1: 2023-04-29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1100-2023-04-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v11.0.0: 2023-04-28
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1000-2022-04-04" class="md-nav__link">
-    v10.0.0: 2022-04-04
+    <span class="md-ellipsis">
+      
+        v10.0.0: 2022-04-04
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v900-2021-05-22" class="md-nav__link">
-    v9.0.0: 2021-05-22
+    <span class="md-ellipsis">
+      
+        v9.0.0: 2021-05-22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v802-2021-05-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v8.0.2: 2021-05-09
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v801-2021-05-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v8.0.1: 2021-05-09
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v800-2020-09-18" class="md-nav__link">
-    v8.0.0: 2020-09-18
+    <span class="md-ellipsis">
+      
+        v8.0.0: 2020-09-18
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v700-2019-11-10" class="md-nav__link">
-    v7.0.0: 2019-11-10
+    <span class="md-ellipsis">
+      
+        v7.0.0: 2019-11-10
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v600-2018-09-17" class="md-nav__link">
-    v6.0.0: 2018-09-17
+    <span class="md-ellipsis">
+      
+        v6.0.0: 2018-09-17
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v504-2018-06-04" class="md-nav__link">
-    v5.0.4: 2018-06-04
+    <span class="md-ellipsis">
+      
+        v5.0.4: 2018-06-04
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v503-2017-11-04" class="md-nav__link">
-    v5.0.3: 2017-11-04
+    <span class="md-ellipsis">
+      
+        v5.0.3: 2017-11-04
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v502-2017-03-28" class="md-nav__link">
-    v5.0.2: 2017-03-28
+    <span class="md-ellipsis">
+      
+        v5.0.2: 2017-03-28
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v501-2017-01-06" class="md-nav__link">
-    v5.0.1: 2017-01-06
+    <span class="md-ellipsis">
+      
+        v5.0.1: 2017-01-06
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v500-2016-10-19" class="md-nav__link">
-    v5.0.0: 2016-10-19
+    <span class="md-ellipsis">
+      
+        v5.0.0: 2016-10-19
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v4" class="md-nav__link">
-    v4
+    <span class="md-ellipsis">
+      
+        v4
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v3" class="md-nav__link">
-    v3
+    <span class="md-ellipsis">
+      
+        v3
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v2" class="md-nav__link">
-    v2
+    <span class="md-ellipsis">
+      
+        v2
+      
+    </span>
   </a>
   
 </li>
@@ -355,44 +583,606 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
 
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/archlinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arch Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian / Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/fedora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fedora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/msys2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows / MSYS2 (GCC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/msys2-llvm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows / MSYS2 (Clang/LLVM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downloads
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Downloads
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../downloads/" class="md-nav__link">
-        Downloads
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-built Toolchains
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+              
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../contribute/" class="md-nav__link">
-        Contribute
+      <a href="../source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Code
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build Systems
+  
 
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-systems/meson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meson
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-systems/cmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/gendef/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gendef
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/genidl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    genidl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/genpeimg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    genpeimg
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/widl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    widl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
   
   
   
     <li class="md-nav__item">
       <a href="../support/" class="md-nav__link">
-        Support
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support &amp; Contact
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -400,77 +1190,110 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Old Pages
+  
 
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Old Pages
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../donate/" class="md-nav__link">
-        Donate
-      </a>
-    </li>
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donate
   
 
     
-      
-      
-      
+  </span>
+  
+  
 
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Documentation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Documentation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/overview/" class="md-nav__link">
-        Overview
       </a>
     </li>
   
 
-            
-          
-            
               
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/configure/" class="md-nav__link">
-        Notable Configure Options
-      </a>
-    </li>
-  
-
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -488,7 +1311,8 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -497,97 +1321,248 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v1300-2025-06-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v13.0.0: 2025-06-08
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v803-2024-06-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v8.0.3: 2024-06-05
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1200-2024-05-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v12.0.0: 2024-05-29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v601-2023-10-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v6.0.1: 2023-10-30
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v505-2023-10-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v5.0.5: 2023-10-30
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1101-2023-04-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v11.0.1: 2023-04-29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1100-2023-04-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v11.0.0: 2023-04-28
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v1000-2022-04-04" class="md-nav__link">
-    v10.0.0: 2022-04-04
+    <span class="md-ellipsis">
+      
+        v10.0.0: 2022-04-04
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v900-2021-05-22" class="md-nav__link">
-    v9.0.0: 2021-05-22
+    <span class="md-ellipsis">
+      
+        v9.0.0: 2021-05-22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v802-2021-05-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v8.0.2: 2021-05-09
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v801-2021-05-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v8.0.1: 2021-05-09
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v800-2020-09-18" class="md-nav__link">
-    v8.0.0: 2020-09-18
+    <span class="md-ellipsis">
+      
+        v8.0.0: 2020-09-18
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v700-2019-11-10" class="md-nav__link">
-    v7.0.0: 2019-11-10
+    <span class="md-ellipsis">
+      
+        v7.0.0: 2019-11-10
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v600-2018-09-17" class="md-nav__link">
-    v6.0.0: 2018-09-17
+    <span class="md-ellipsis">
+      
+        v6.0.0: 2018-09-17
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v504-2018-06-04" class="md-nav__link">
-    v5.0.4: 2018-06-04
+    <span class="md-ellipsis">
+      
+        v5.0.4: 2018-06-04
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v503-2017-11-04" class="md-nav__link">
-    v5.0.3: 2017-11-04
+    <span class="md-ellipsis">
+      
+        v5.0.3: 2017-11-04
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v502-2017-03-28" class="md-nav__link">
-    v5.0.2: 2017-03-28
+    <span class="md-ellipsis">
+      
+        v5.0.2: 2017-03-28
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v501-2017-01-06" class="md-nav__link">
-    v5.0.1: 2017-01-06
+    <span class="md-ellipsis">
+      
+        v5.0.1: 2017-01-06
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v500-2016-10-19" class="md-nav__link">
-    v5.0.0: 2016-10-19
+    <span class="md-ellipsis">
+      
+        v5.0.0: 2016-10-19
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v4" class="md-nav__link">
-    v4
+    <span class="md-ellipsis">
+      
+        v4
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v3" class="md-nav__link">
-    v3
+    <span class="md-ellipsis">
+      
+        v3
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v2" class="md-nav__link">
-    v2
+    <span class="md-ellipsis">
+      
+        v2
+      
+    </span>
   </a>
   
 </li>
@@ -600,17 +1575,110 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
+          
+            <div class="md-content" data-md-component="content">
               
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/changelog.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
-
+                  
+  
+    <a href="https://github.com/mingw-w64/mingw-w64.github.io/edit/source/web/changelog.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
 
 
 <h1 id="changelog">Changelog</h1>
+<p>The releases are sorted by date, with the most recent release at the top.</p>
+<h2 id="v1300-2025-06-08">v13.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/59192665/">2025-06-08</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li>Added import libraries for msvcr40d.dll, msvcrtd.dll, msvcr70d.dll, msvcr71d.dll, msvcr80d.dll, msvcr100d.dll, msvcr110d.dll.</li>
+<li>Better CRT API consistency between UCRT and MSVCRT, making many APIs available to earlier versions of the MSVCR* runtime as well.</li>
+<li>CRTDLL stat API fixes.</li>
+<li>Updated Hyper-V headers.</li>
+<li>Synchronized with Wine headers (from Wine 10.9).</li>
+<li>Many other new win32 APIs.</li>
+<li>Fix <code>_atexit</code> call differing between DLLs and EXEs.</li>
+<li>Basic support for ARM64EC targets (arm64ec-w64-mingw32).</li>
+<li>Make it possible to build winpthreads with MSVC and clang-cl.</li>
+<li>Many small fixes for gendef, genidl and genpeimg.</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical order):</p>
+<p>Alexander Argentakis, Antonin Décimo, Billy Laws, Biswapriyo Nath, Daniel
+Starke, Daniel Verkamp, David Grayson, Duncan Ogilvie, Isuru Fernando, Jacek
+Caban, Jeremy Drake, Jøger Hansegård, Kirill Makurin, Lasse Collin, Le
+Philousophe, LIU Hao, Marc-André Lureau, Martin Storsjö, Nikolay Sivov, Pali
+Rohár, Rafael Kitover, Steve Lhomme, TheShermanTanker, Yang Kun</p>
+<h2 id="v803-2024-06-05">v8.0.3: <a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/v8.0.3">2024-06-05</a></h2>
+<ul>
+<li><a href="https://github.com/mingw-w64/mingw-w64/compare/v8.0.2...v8.0.3">Various backports</a></li>
+</ul>
+<h2 id="v1200-2024-05-29">v12.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/58776404/">2024-05-29</a></h2>
+<p><strong>Important:</strong> UCRT is now the default CRT runtime instead of MSVCRT, check the
+<a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/master/tree/mingw-w64-doc/howto-build/ucrt-vs-msvcrt.txt">mingw-w64-doc/howto-build/ucrt-vs-msvcrt.txt</a>
+document for details. Both header set and CRT must be configured and built with
+the same settings consistently for proper functionality. Switching runtimes
+requires all libraries to be rebuilt, including GCC.</p>
+<p>Notable changes:</p>
+<ul>
+<li>C++ overloads for <code>_strdate_s</code> and <code>_strtime_s</code>, <code>_makepath_s</code>, <code>wcsncat_s</code>.</li>
+<li>gdtoa updated against <a href="https://netlib.org/">netlib.org</a>, up to January 2023.</li>
+<li>genlib tool removed in favor of llvm-dlltool, created by the same author.</li>
+<li>Make it possible to use winpthreads with MSVC.</li>
+<li>Updated wine header imports.</li>
+<li>Many other new win32 APIs.</li>
+<li>UCRT configurations now primarily use (faster) math functions from UCRT, rather than libmingwex</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical order):</p>
+<p>Antonin Décimo, Bernhard Übelacker, Biswapriyo Nath, Christian Franke, Dustin
+Gadal, Jacek Caban, Jameson Nash, Jøger Hansegård, Jonathan Schleifer, Kacper
+Michajłow, LIU Hao, Mark Harmstone, Martin Storsjö, Mateusz Mikuła, Nikolay
+Sivov, Oleg Tolmatcev, Ozkan Sezer, Pali Rohár, Pavel Shishpor, Richard Copley,
+Steve Lhomme</p>
+<h2 id="v601-2023-10-30">v6.0.1: <a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/v6.0.1">2023-10-30</a></h2>
+<ul>
+<li><a href="https://github.com/mingw-w64/mingw-w64/compare/v6.0.0...v6.0.1">Various backports</a></li>
+</ul>
+<h2 id="v505-2023-10-30">v5.0.5: <a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/v5.0.5">2023-10-30</a></h2>
+<ul>
+<li><a href="https://github.com/mingw-w64/mingw-w64/compare/v5.0.4...v5.0.5">Various backports</a></li>
+</ul>
+<h2 id="v1101-2023-04-29">v11.0.1: <a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/v11.0.1">2023-04-29</a></h2>
+<ul>
+<li>Fixes for w32api/Cygwin</li>
+</ul>
+<h2 id="v1100-2023-04-28">v11.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/37837156/">2023-04-28</a></h2>
+<p>Notable changes:</p>
+<ul>
+<li>New libdloadhelper.a, like libdelayimp.a but using Windows 8 and later APIs.</li>
+<li>Fix race condition when building lib32 and lib64 in parallel on Windows.</li>
+<li>*recalloc now only available from msvcr90 and later, UCRT.</li>
+<li>Redirect access() to __mingw_access() on UCRT wrt to X_OK problems.</li>
+<li>New Hyper-V APIs.</li>
+<li>SEH based setjmp on ARM if supported by compiler.</li>
+<li>--enable-cfguard to enable Control Flow Guard in CRT, requires compiler
+  support, clang only at this time.</li>
+<li>Implement some of the stack protector functions/variables so -lssp is
+  now optional when _FORTIFY_SOURCE or -fstack-protector-strong is used.</li>
+<li>_FORTIFY_SOURCE=3 support added if __builtin_dynamic_object_size is supported
+  by the compiler (gcc 12 or later).</li>
+<li>genstubdll removed.</li>
+<li>uchar_c16rtomb, uchar_c32rtomb, uchar_mbrtoc16 and uchar_mbrtoc32 removed for
+  MSVCR*, UCRT only for now.</li>
+<li>Updates to DX12 headers and much more from Wine.</li>
+<li>Many other new win32 APIs.</li>
+</ul>
+<p>And many other additions thanks to, but not limited to (in Alphabetical
+order)</p>
+<p>Alvin Wong, Biswapriyo Nath, Christian Franke, Christoph Reiter, Costas Argyris,
+delthas, Dmitry Karasik, Jacek Caban, Jeremy Drake, L. E. Segovia, LIU Hao, Luca
+Bacci, Mark Harmstone, Markus Mützel, Martin Storsjö, Mateusz Wajchęprzełóż,
+Matthew Lugg, Mike Gelfand, Oleg Oshmyan, Oleg Tolmatcev, Ozkan Sezer, Pali
+Rohár, Raf Lopez, Sergei Trofimovich, Steve Lhomme, TheShermanTanker, Yannis
+Juglaret, Yonggang Luo, 李通洲,</p>
 <h2 id="v1000-2022-04-04">v10.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/37635065/">2022-04-04</a></h2>
 <p>Notable changes:</p>
 <ul>
@@ -645,6 +1713,14 @@ Ritter</p>
 Reiter, DAVID MAY, Jacek Caban, Jeremy Drake, Jonathan Yong, Liu Hao, Mark
 Harmstone, Martin Storsjö, Mateusz Mikuła, Nikolay Sivov, Ozkan Sezer, Pierre
 Lamot, Rafał Harabień, Scr3amer, Steve Lhomme</p>
+<h2 id="v802-2021-05-09">v8.0.2: <a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/v8.0.2">2021-05-09</a></h2>
+<ul>
+<li><a href="https://github.com/mingw-w64/mingw-w64/compare/v8.0.1...v8.0.2">Various backports</a></li>
+</ul>
+<h2 id="v801-2021-05-09">v8.0.1: <a href="https://sourceforge.net/p/mingw-w64/mingw-w64/ci/v8.0.1">2021-05-09</a></h2>
+<ul>
+<li><a href="https://github.com/mingw-w64/mingw-w64/compare/v8.0.0...v8.0.1">Various backports</a></li>
+</ul>
 <h2 id="v800-2020-09-18">v8.0.0: <a href="https://sourceforge.net/p/mingw-w64/mailman/message/37111166/">2020-09-18</a></h2>
 <p>Notable changes:</p>
 <ul>
@@ -730,7 +1806,7 @@ Ritter Yuta Nakai Алексей Павлов Руслан Ижбулатов �
 <li>Don't use feature <code>(__attribute__((gcc_struct)))</code> that isn't supported on
   clang when compiling on clang thanks to David Wohlferd.</li>
 <li>Various ARM math fixes thanks to Martin Storsjö</li>
-<li>Removed some duplicate uuids defintions, thanks to HugoBeauzée-Luyssen.</li>
+<li>Removed some duplicate uuids definitions, thanks to HugoBeauzée-Luyssen.</li>
 <li>Define <code>IN6_IS_ADDR_</code> macros to conform to Posix Specm thanks toJean-Baptiste
   Kempf</li>
 <li>dxva.h: Add support for VP8/9 in DxVA2 thanks to Yuta Nakai</li>
@@ -771,49 +1847,32 @@ Ritter Yuta Nakai Алексей Павлов Руслан Ижбулатов �
 <li>Expanded Windows Vista/7 API support.</li>
 </ul>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Overview
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../downloads/" class="md-footer__link md-footer__link--next" aria-label="Next: Downloads" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Downloads
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -821,8 +1880,8 @@ Ritter Yuta Nakai Алексей Павлов Руслан Ижбулатов �
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -835,10 +1894,16 @@ Ritter Yuta Nakai Алексей Павлов Руслан Ижбулатов �
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.instant","content.action.edit","content.code.copy","content.tabs.link"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5fd3284f.min.js"></script>
       
     
   </body>
